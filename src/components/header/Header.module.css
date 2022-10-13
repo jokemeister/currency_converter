@@ -1,0 +1,25 @@
+.title__desc {
+  color: grey;
+  margin-top: 16px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.currency__list {
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-between;
+}
+
+.currency__item {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.449);
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 75px;
+  border-radius: 20px;
+}

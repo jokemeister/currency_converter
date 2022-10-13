@@ -1,10 +1,15 @@
 import "./App.css";
+
+import { CurrencyProvider } from "./hoc/CurrencyProvider";
+
 import Router from "./router";
 
 function App() {
   return (
     <div className="App">
-      <Router />
+      <CurrencyProvider>
+        <Router />
+      </CurrencyProvider>
     </div>
   );
 }

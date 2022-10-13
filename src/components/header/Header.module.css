@@ -1,4 +1,4 @@
-.title__desc {
+.title_desc {
   color: grey;
   margin-top: 16px;
 }
@@ -7,13 +7,13 @@
   margin-bottom: 16px;
 }
 
-.currency__list {
+.currency_list {
   display: flex;
   flex: row nowrap;
   justify-content: space-between;
 }
 
-.currency__item {
+.currency_item {
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.449);

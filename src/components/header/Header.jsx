@@ -23,15 +23,15 @@ export const Header = () => {
   return (
     <header>
       <div className="container">
-        <p className={styles.title__desc}>Курс на сьогодні</p>
+        <p className={styles.title_desc}>Курс на сьогодні</p>
         <h2 className={styles.title}>Курс валют в банках</h2>
-        <ul className={styles.currency__list}>
+        <ul className={styles.currency_list}>
           {
             currencyBase && currencyBase.map(currency => {
               return (
-                <li className={styles.currency__item}>
-                  <h3 className={styles.currency__title}>{ currency.ccy }</h3>
-                  <span className={styles.currency__text}>
+                <li className={styles.currency_item} key={currency.ccy}>
+                  <h3 className={styles.currency_title}>{ currency.ccy }</h3>
+                  <span className={styles.currency_text}>
                     { currency.buy } / { currency.sale }
                   </span>
                 </li>

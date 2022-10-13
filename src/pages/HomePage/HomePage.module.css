@@ -1,0 +1,51 @@
+.main {
+  background-color: rgba(255, 255, 255, 0.449);
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.convertion_section {
+  padding: 16px;
+  width: 60%;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid rgba(190, 190, 190, 0.441);
+  border-radius: 5px;
+}
+
+.section_title {
+  margin-bottom: 8px;
+}
+
+.convertion_block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2%;
+}
+
+.sale_block, .buy_block {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(253, 253, 253);
+  border: 1px solid rgba(212, 212, 212, 0.441);
+  border-radius: 5px;
+}
+
+.sale_title, .buy_title {
+  margin-bottom: 8px;
+  color: grey;
+}
+
+.sale_input, .sale_select, .buy_input, .buy_select {
+  outline: none;
+  border: none;
+  appearance: none;
+  font-size: 18px;
+}
+
+.sale_select, .buy_select {
+  font-size: 18px;
+  font-weight: bold;
+  max-width: max-content;
+}

@@ -1,11 +1,13 @@
 import React from "react";
 
-import "./Footer.css";
+import styles from "./Footer.module.css";
 
 export const Footer = () => {
   return (
-    <footer>
-      <h1>My footer</h1>
+    <footer className={styles.footer}>
+      <div className="container">
+        <p className={styles.text}>Made By Daniil Dubrovskyi</p>
+      </div>
     </footer>
   );
 };

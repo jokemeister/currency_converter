@@ -1,0 +1,11 @@
+.footer {
+  padding: 16px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.text {
+  font-weight: bold;
+  text-transform: uppercase;
+}

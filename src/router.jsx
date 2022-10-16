@@ -10,7 +10,7 @@ function Router() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index path="/" element={<HomePage />} />
+          <Route index path="/currency_converter" element={<HomePage />} />
         </Route>
       </Routes>
     </div>

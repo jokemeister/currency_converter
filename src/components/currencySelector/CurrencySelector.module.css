@@ -1,0 +1,14 @@
+.selector {
+  font-size: 18px;
+  font-weight: bold;
+  max-width: max-content;
+  outline: none;
+  border: none;
+  appearance: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.selector:hover {
+  opacity: .65;
+}

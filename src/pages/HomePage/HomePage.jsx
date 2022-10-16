@@ -24,7 +24,7 @@ export const HomePage = () => {
       <div className="container">
         <section className={styles.convertion_section}>
           <h2 className={styles.section_title}>
-            Конвертер {saleCurrency} в {buyCurrency}
+            Конвертація {saleCurrency} в {buyCurrency}
           </h2>
           <div className={styles.convertion_block}>
             <div className={styles.sale_block}>

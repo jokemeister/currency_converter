@@ -12,11 +12,6 @@ export const useCurrency = () => {
 
   const { currencyInfo } = useContext(CurrencyContext);
 
-  function isNegative(value) {
-    const positive = new RegExp("^[0-9]*$");
-    return !positive.test(value);
-  }
-
   useEffect(() => {
     currencyInfo.then((curInf) => {
       curInf.rates.UAH = 1;
@@ -35,7 +30,6 @@ export const useCurrency = () => {
   function changeSaleAmount(e) {
     console.log(e.target.value);
     if (!currencyBase.rates) return;
-    if (isNegative(e.target.value)) return;
 
     setBuyAmount(e.target.value);
     setSaleAmount(
@@ -47,7 +41,6 @@ export const useCurrency = () => {
   function changeBuyAmount(e) {
     console.log(e.target.value);
     if (!currencyBase.rates) return;
-    if (isNegative(e.target.value)) return;
 
     setSaleAmount(e.target.value);
     setBuyAmount(

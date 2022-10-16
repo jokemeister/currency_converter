@@ -17,7 +17,7 @@ export const CurrencyContext = createContext();
 export const CurrencyProvider = ({ children }) => {
   function getCurrency() {
     return axios(currencyApi.apiUrl, currencyApi.reqOptions)
-      .then((response) => {console.log(response.data); return response.data})
+      .then((response) => response.data)
       .catch((error) => {
         throw new Error(error);
       });

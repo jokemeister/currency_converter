@@ -28,7 +28,6 @@ export const useCurrency = () => {
   }, [saleCurrency, buyCurrency]);
 
   function changeSaleAmount(e) {
-    console.log(e.target.value);
     if (!currencyBase.rates) return;
 
     setBuyAmount(e.target.value);
@@ -39,7 +38,6 @@ export const useCurrency = () => {
   }
 
   function changeBuyAmount(e) {
-    console.log(e.target.value);
     if (!currencyBase.rates) return;
 
     setSaleAmount(e.target.value);

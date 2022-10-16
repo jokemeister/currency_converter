@@ -1,42 +1,31 @@
 import React, { createContext } from "react";
 import axios from "axios";
 
-const database = [
-  {
-    ccy: "GDP",
-    base_ccy: "UAH",
-    buy: "38.65",
-    sale: "39.95",
-  },
-  {
-    ccy: "EUR",
-    base_ccy: "UAH",
-    buy: "36.50",
-    sale: "37.45",
-  },
-  {
-    ccy: "USD",
-    base_ccy: "UAH",
-    buy: "36.65",
-    sale: "37.95",
-  },
-];
+const currencyApi = {
+  apiUrl : "https://api.apilayer.com/exchangerates_data/latest?symbols=GBP%2C%20EUR%2C%20USD&base=UAH", 
+  reqOptions: {
+    method: "GET",
+    redirect: "follow",
+    headers: {
+      apikey: "K8Nk9qWEXaUhkdZMmODAuux3wIYfrUIc",
+    },
+  }
+};
 
 export const CurrencyContext = createContext();
 
 export const CurrencyProvider = ({ children }) => {
-  function getCurrency(endPoint) {
-    // return axios
-    //   .get(endPoint)
-    //   .then((res) => res.data)
-    //   .catch((err) => {
-    //     throw new Error(err);
-    //   });
-    console.log(database);
-    return database;
+  function getCurrency() {
+    return axios(currencyApi.apiUrl, currencyApi.reqOptions)
+      .then((response) => {console.log(response.data); return response.data})
+      .catch((error) => {
+        throw new Error(error);
+      });
   }
 
-  const currencyData = { getCurrency };
+  const currencyInfo = getCurrency();
+
+  const currencyData = { getCurrency, currencyInfo };
   return (
     <CurrencyContext.Provider value={currencyData}>
       {children}

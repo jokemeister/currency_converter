@@ -36,16 +36,3 @@
   margin-bottom: 8px;
   color: grey;
 }
-
-.sale_input, .sale_select, .buy_input, .buy_select {
-  outline: none;
-  border: none;
-  appearance: none;
-  font-size: 18px;
-}
-
-.sale_select, .buy_select {
-  font-size: 18px;
-  font-weight: bold;
-  max-width: max-content;
-}
